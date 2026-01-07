@@ -239,6 +239,254 @@ h1 {
 .msg-user { background: rgba(255,255,255,0.1); padding: 8px 12px; border-radius: 12px 12px 0 12px; font-size: 0.8rem; margin-bottom: 8px; width: fit-content; margin-left: auto; }
 .msg-bot { background: var(--accent-blue); padding: 8px 12px; border-radius: 12px 12px 12px 0; font-size: 0.8rem; width: fit-content; }
 
+
+/* --- ABOUT SECTION --- */
+.about-section {
+    padding: 8rem 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 4rem;
+    align-items: center;
+}
+@media (max-width: 900px) { .about-container { grid-template-columns: 1fr; } }
+
+.badge {
+    display: inline-block;
+    padding: 6px 14px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--accent-cyan);
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.about-content h2 { font-size: 3rem; margin-bottom: 1.5rem; line-height: 1.1; }
+.about-content p { color: var(--text-gray); margin-bottom: 1.5rem; line-height: 1.7; font-size: 1.05rem; }
+.about-content strong { color: white; }
+
+.stats-grid {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.stat-box { display: flex; flex-direction: column; }
+.stat-num { font-size: 2rem; font-weight: 800; color: var(--accent-blue); }
+.stat-label { font-size: 0.8rem; color: var(--text-gray); text-transform: uppercase; letter-spacing: 1px; }
+
+/* The Abstract Image Card */
+.image-card {
+    background: linear-gradient(145deg, rgba(255,255,255,0.05), rgba(0,0,0,0.2));
+    border: 1px solid var(--glass-border);
+    border-radius: 30px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.glow-circle {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: var(--accent-cyan);
+    filter: blur(80px);
+    opacity: 0.2;
+    border-radius: 50%;
+}
+
+
+/* --- CONTACT SECTION --- */
+.contact-section {
+    padding: 8rem 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+@media (max-width: 900px) { .contact-container { grid-template-columns: 1fr; } }
+
+.contact-text h2 { font-size: 2.5rem; margin-bottom: 1rem; }
+.contact-text p { color: var(--text-gray); margin-bottom: 2rem; line-height: 1.6; }
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: var(--text-white);
+}
+.detail-item i { color: var(--accent-blue); font-size: 1.5rem; }
+
+/* The Form Itself */
+.audit-form {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    padding: 2.5rem;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.form-group { margin-bottom: 1.5rem; }
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text-gray);
+    font-weight: 500;
+}
+
+.form-group input, 
+.form-group select {
+    width: 100%;
+    padding: 12px 16px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    color: white;
+    font-family: inherit;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus, 
+.form-group select:focus {
+    border-color: var(--accent-blue);
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 14px;
+    background: var(--accent-blue);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-submit:hover {
+    background: #0046a8;
+}
+
+/* --- CASE STUDY PAGE STYLES --- */
+
+.case-header {
+    padding: 180px 20px 60px;
+    text-align: center;
+    position: relative;
+}
+
+.small-glow {
+    width: 300px;
+    height: 300px;
+    opacity: 0.1;
+}
+
+.case-section {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1.5rem 6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem; /* Space between stories */
+}
+
+.case-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 3rem;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.case-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* The colored label at the top of the card */
+.case-label {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 6px 12px;
+    border-radius: 50px;
+    margin-bottom: 1.5rem;
+}
+.blue-label { background: rgba(0, 86, 210, 0.2); color: #60a5fa; }
+.cyan-label { background: rgba(0, 212, 255, 0.1); color: var(--accent-cyan); }
+.purple-label { background: rgba(168, 85, 247, 0.1); color: #c084fc; }
+
+.case-card h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* The stats row */
+.case-stats {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--accent-cyan);
+    font-weight: 600;
+}
+.stat i { font-size: 1.2rem; }
+
+.case-body p {
+    color: var(--text-gray);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.case-body strong {
+    color: var(--text-white);
+}
+
+.divider {
+    border: 0;
+    height: 1px;
+    background: var(--glass-border);
+    margin: 1.5rem 0;
+}
+
+
 /* --- FOOTER --- */
 footer { border-top: 1px solid var(--glass-border); padding: 4rem 1.5rem; background: #050608; }
 .footer-content { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 2rem; }

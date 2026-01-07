@@ -46,8 +46,8 @@
         <p class="hero-sub">We bridge the gap between enterprise-grade technology and small business agility. Secure. Scalable. AI-Ready.</p>
         
         <div class="hero-buttons">
-            <button class="btn-primary">Start Your Audit <i class="ph-bold ph-arrow-right"></i></button>
-            <button class="btn-secondary">View Case Studies</button>
+            <a href="#contact" class="btn-primary" style="text-decoration: none;">Start Your Audit <i class="ph-bold ph-arrow-right"></i></a>
+            <a href="case-studies.html" class="btn-secondary" style="text-decoration: none;">View Case Studies</a>
         </div>
     </header>
 
@@ -60,6 +60,7 @@
             <div class="slide">GOOGLE CLOUD</div>
             <div class="slide">UBIQUITI</div>
             <div class="slide">DELL</div>
+            <div class="slide">HP</div>
 
             <div class="slide">MICROSOFT</div>
             <div class="slide">AZURE</div>
@@ -68,8 +69,43 @@
             <div class="slide">GOOGLE CLOUD</div>
             <div class="slide">UBIQUITI</div>
             <div class="slide">DELL</div>
+            <div class="slide">HP</div>
         </div>
     </div>
+
+
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <div class="about-content">
+                <div class="badge">Who We Are</div>
+                <h2>The Bridge Between <span class="gradient-text">Tech & Business</span></h2>
+                <p>Founded in 2023 by <strong>Thoriso Moteane</strong>, an Azure Solutions Architect, Moteane Engineering & Technology was built to solve a specific problem: Small businesses are being left behind by the AI revolution.</p>
+                <p>We are a <strong>100% Black-Owned, B-BBEE Level 1 Contributor</strong>. We don't just sell software; we act as your virtual Chief Technology Officer (CTO), ensuring your infrastructure is secure, your data is backed up, and your business is ready to scale.</p>
+                
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <span class="stat-num">100%</span>
+                        <span class="stat-label">Black Owned</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-num">Lvl 1</span>
+                        <span class="stat-label">B-BBEE</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-num">24/7</span>
+                        <span class="stat-label">Support</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="about-image">
+                <div class="image-card">
+                    <div class="glow-circle"></div>
+                    <i class="ph-duotone ph-buildings" style="font-size: 5rem; color: white; position: relative; z-index: 2;"></i>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section id="services" class="services">
         <div class="section-header">
@@ -112,6 +148,61 @@
             </div>
         </div>
     </section>
+
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            <div class="contact-text">
+                <h2>Ready to Secure Your Business?</h2>
+                <p>Fill out the form below to request your <strong>Free IT Infrastructure Audit</strong>. We will analyze your current setup and identify risks before they become problems.</p>
+                
+                <div class="contact-details">
+                    <div class="detail-item">
+                        <i class="ph-fill ph-envelope-simple"></i>
+                        <span>solutions@moteane.co.za</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="ph-fill ph-phone"></i>
+                        <span>+27 11 555 0192</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="ph-fill ph-map-pin"></i>
+                        <span>Midrand, Gauteng</span>
+                    </div>
+                </div>
+            </div>
+
+            <form class="audit-form" onsubmit="event.preventDefault(); alert('Thank you! We will contact you shortly.');">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="John Doe" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Work Email</label>
+                    <input type="email" placeholder="john@company.co.za" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Company Name</label>
+                    <input type="text" placeholder="Moteane Holdings" required>
+                </div>
+
+                <div class="form-group">
+                    <label>What is your main IT challenge?</label>
+                    <select>
+                        <option>General IT Support</option>
+                        <option>Cloud Migration</option>
+                        <option>Cybersecurity / Risk</option>
+                        <option>AI Automation</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-submit">Request Audit</button>
+            </form>
+        </div>
+    </section>
+
 
     <footer>
         <div class="footer-content">
