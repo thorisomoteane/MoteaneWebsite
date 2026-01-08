@@ -171,30 +171,35 @@
                 </div>
             </div>
 
-            <form class="audit-form" onsubmit="event.preventDefault(); alert('Thank you! We will contact you shortly.');">
+            <form class="audit-form" action="https://api.web3forms.com/submit" method="POST">
+                
+                <input type="hidden" name="access_key" value="213418f4-753d-4e6c-aafc-1c5ab7327ac9">
+
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
                 <div class="form-group">
                     <label>Full Name</label>
-                    <input type="text" placeholder="John Doe" required>
+                    <input type="text" name="name" placeholder="John Doe" required>
                 </div>
                 
                 <div class="form-group">
                     <label>Work Email</label>
-                    <input type="email" placeholder="john@company.co.za" required>
+                    <input type="email" name="email" placeholder="john@company.co.za" required>
                 </div>
 
                 <div class="form-group">
                     <label>Company Name</label>
-                    <input type="text" placeholder="Moteane Holdings" required>
+                    <input type="text" name="company" placeholder="Moteane Holdings" required>
                 </div>
 
                 <div class="form-group">
                     <label>What is your main IT challenge?</label>
-                    <select>
-                        <option>General IT Support</option>
-                        <option>Cloud Migration</option>
-                        <option>Cybersecurity / Risk</option>
-                        <option>AI Automation</option>
-                        <option>Other</option>
+                    <select name="message">
+                        <option value="General IT Support">General IT Support</option>
+                        <option value="Cloud Migration">Cloud Migration</option>
+                        <option value="Cybersecurity / Risk">Cybersecurity / Risk</option>
+                        <option value="AI Automation">AI Automation</option>
+                        <option value="Other">Other</option>
                     </select>
                 </div>
 
