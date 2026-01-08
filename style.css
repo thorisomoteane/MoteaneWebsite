@@ -40,7 +40,9 @@ nav {
 }
 
 /* Logo Styling - Fixing the White Box */
-.logo-box { display: flex; align-items: center; gap: 12px; }
+/* Logo Styling - Updated for Size */
+.logo-box { display: flex; align-items: center; gap: 12px; text-decoration: none; } /* Added text-decoration: none to remove underline if it's a link */
+
 .logo-bg {
     background: white;
     padding: 6px;
@@ -50,11 +52,50 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0; /* Prevents logo from squishing on small phones */
 }
 .logo-bg img { width: 100%; height: auto; object-fit: contain; }
-.logo-text { display: flex; flex-direction: column; line-height: 1.1; }
-.company-name { font-weight: 800; font-size: 1.1rem; letter-spacing: -0.5px; }
-.company-sub { font-size: 0.7rem; color: var(--text-gray); text-transform: uppercase; letter-spacing: 1px; }
+
+.logo-text { 
+    display: flex; 
+    flex-direction: column; 
+    line-height: 1; /* Tighter line height for better stacking */
+    justify-content: center;
+}
+
+.company-name { 
+    font-weight: 800; 
+    font-size: 1.25rem; /* Mobile Size (Base) */
+    letter-spacing: -0.5px; 
+    color: white; 
+}
+
+.company-sub { 
+    font-size: 0.75rem; /* Mobile Size (Base) */
+    color: var(--text-gray); 
+    text-transform: uppercase; 
+    letter-spacing: 0.5px; 
+    font-weight: 600;
+}
+
+/* DESKTOP SCALE: Make it much bigger on laptop screens */
+@media (min-width: 768px) {
+    .logo-bg {
+        height: 50px; /* Logo icon gets slightly bigger too */
+        width: 50px;
+    }
+    
+    .company-name { 
+        font-size: 1.8rem; /* Big, bold Desktop size */
+    }
+    
+    .company-sub { 
+        font-size: 0.85rem; /* Readable sub-text */
+        letter-spacing: 2px;
+    }
+}
+
+
 
 .nav-links a {
     color: var(--text-gray);
